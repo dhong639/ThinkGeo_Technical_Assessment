@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Measure WKT</title>
+  </head>
+  <body>
+    <div id="app">
+      <article class="panel is-primary">
+        <p class="panel-heading">
+          Measure WKT
+        </p>
+        <p id="tabs" class="panel-tabs">
+          <a id="distanceBetweenPointsTab" class="is-active"
+            >Distance Between Points</a
+          >
+          <a id="lengthOfLineTab">Length of Linestring</a>
+          <a id="perimeterOfPolygonTab">Perimeter of Polygon</a>
+          <a id="areaOfPolygonTab">Area of Polygon</a>
+        </p>
+        <div id="tabContentBlock" class="container section">
+          <div id="distanceBetweenPointsContent" class="content-tab">
+            <div class="field">
+              <label class="label">Start Point</label>
+              <div class="control">
+                <input
+                  id="startPointInput"
+                  class="input"
+                  type="text"
+                  value="POINT(-96.85 32.75)"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">End Point</label>
+              <div class="control">
+                <input
+                  id="endPointInput"
+                  class="input"
+                  type="text"
+                  value="POINT(-95.35 32.75)"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <button id="calculateDistanceButton" class="button is-link">
+                Calculate Distance
+              </button>
+            </div>
+            <div class="field">
+              <label class="label">Result</label>
+              <div class="control">
+                <input
+                  id="distanceResult"
+                  class="input"
+                  type="text"
+                  value=""
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+          <div id="lengthOfLineContent" class="content-tab is-hidden">
+            <div class="field">
+              <label class="label">Line</label>
+              <div class="control">
+                <input
+                  id="lineInput"
+                  class="input"
+                  type="text"
+                  placeholder="LINESTRING(-96.85 32.75,-94.15 32.85)"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <button id="calculateLengthButton" class="button is-link">
+                Calculate Length
+              </button>
+            </div>
+            <div class="field">
+              <label class="label">Result</label>
+              <div class="control">
+                <input
+                  id="lengthResult"
+                  class="input"
+                  type="text"
+                  value=""
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+          <div id="perimeterOfPolygonContent" class="content-tab is-hidden">
+            <h1 class="title">Perimeter Coming Soon!</h1>
+          </div>
+          <div id="areaOfPolygonContent" class="content-tab is-hidden">
+            <h1 class="title">Area Coming Soon!</h1>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
