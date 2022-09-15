@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "jest": "29.0.2",
+    "ol": "7.1.0",
     "parcel-bundler": "^1.6.1",
     "wkt": "0.1.1"
   },
